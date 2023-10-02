@@ -1,0 +1,45 @@
+Pipeline
+========
+
+Recording
+---------
+
+- TDT OpenWorkbench for recording data (w/ Coloured_Oddball_*.rcx)
+
+- Behavioural video recording with <> Python 2. script
+
+
+Post-recording
+--------------
+
+- zip and copy LFP data to server
+
+- copy videos, diary file, saveStruct files to server (Videos and saveStruct go to "LFP\COLLATED\<datestamp>\Videos" and "LFP\COLLATED\<datestamp>\MAT", respectively)
+
+- copy videos to folder/s under "C:\MotionDetection\Data", identify and snapshot exemplar frame which is then used to determine ROI topleft point of MotionDetection analyses in anc files
+
+- run DLC on videos and copy output to server ("LFP\COLLATED\<datestamp>\DLC")
+
+
+Preprocessing
+-------------
+
+- Behavioural videos
+	- Architecture: "Collated\<datestamp>\Videos" and "Collated\<datestamp>\DLC"
+	- SOFAS
+	- Take savOut file ("Matthew\TDTs\SleepData\SavOut") and place into "SPECIFIC" folder
+
+- LFP
+	- Architecture: "Data\<datestamp [e.g. 090222]>\<Experiment [e.g. 090222_RedLightOvernight]>"
+	- preprocess_01_converttdt_*
+	- Copy MAT files to "MAT" folder within "Processed\<datestamp>\LFP", copy stitch list to same root location
+	- Stitcher (Requires copying of stitch CSV)
+
+
+Analysis
+--------
+
+- SASIFRAS
+	- Generates integ file ("Matthew\TDTs\SleepData\IntegOut") in folder
+
+- Oddball_Processing (Requires SASIFRAS integ file in folder)
