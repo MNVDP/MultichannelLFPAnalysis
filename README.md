@@ -53,5 +53,5 @@ Section 3 - LFP preprocessing and processing
 
 #3.3 - If data needs to be stitched, OvernightBlockStitcher_2_XM.m is used to stitch separate data blocks into singular element
 
-#3.4 - OddballProcessing_11point35_XM.m performs primary LFP analysis on data, utilising integOut files for behavioural integration information
+#3.4 - OddballProcessing_11point35_XM.m performs primary LFP analysis on data, utilising integOut files for behavioural integration information. Alternatively, oddballProcess provides a function version of the same, updated to a newer version
 
